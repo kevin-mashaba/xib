@@ -1,4 +1,4 @@
-package com.xib.assessment;
+package com.xib.assessment.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

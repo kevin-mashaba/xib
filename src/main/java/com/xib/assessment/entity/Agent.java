@@ -1,9 +1,13 @@
-package com.xib.assessment;
+package com.xib.assessment.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+
+import com.xib.assessment.entity.Team;
 
 @Entity
 public class Agent {
@@ -13,8 +17,12 @@ public class Agent {
     private String firstName;
     private String lastName;
     private String idNumber;
-    @ManyToOne
+    
+    @OneToOne
     private Team team;
+    
+    @OneToOne
+    private Manager manager;
 
     public Long getId() {
         return id;
@@ -55,4 +63,13 @@ public class Agent {
     public void setIdNumber(String idNumber) {
         this.idNumber = idNumber;
     }
+
+	public Manager getManager() {
+		return manager;
+	}
+
+	public void setManager(Manager manager) {
+		this.manager = manager;
+	}
+    
 }

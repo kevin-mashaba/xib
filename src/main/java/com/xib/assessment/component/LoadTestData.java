@@ -1,7 +1,12 @@
-package com.xib.assessment;
+package com.xib.assessment.component;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.xib.assessment.entity.Agent;
+import com.xib.assessment.entity.Team;
+import com.xib.assessment.repository.AgentRepository;
+import com.xib.assessment.repository.TeamRepository;
 
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
